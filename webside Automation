@@ -1,0 +1,25 @@
+/// <reference types="Cypress" />
+it.only("Homework", () => {
+    cy.visit("https://devexpress.github.io/testcafe/example/");
+        cy.get("#developer-name").type("Tomasz");
+        cy.wait(200)
+        cy.get("#remote-testing").click();
+        cy.wait(200)
+        cy.get('#windows').click();
+        cy.wait(200)
+        cy.get('#background-parallel-testing').click();
+        cy.wait(200)
+        cy.get('#traffic-markup-analysis').click();
+        // cy.wait(200);
+        // cy.get('#preferred-interface').click();
+        // cy.wait(200);
+        // cy.get('#Both').click();
+        cy.wait(200);
+        cy.get('#tried-test-cafe').click();
+        cy.wait(200);
+        cy.get('.ui-slider-handle.ui-corner-all.ui-state-default').invoke("attr", "style", "left: 55.5556%;");
+        cy.get('#comments').type("I really enjoy using it and i think thats is so useful", {delay: 50});
+        cy.get("#preferred-interface").select('Both');
+        cy.wait(200);
+        cy.get('#submit-button').click();
+    })
